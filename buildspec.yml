@@ -1,0 +1,21 @@
+version: 0.2.0
+
+phases:
+  install:
+    commands:
+      - echo "Installing dependencies..."
+      - npm install
+  build:
+    commands:
+      - echo "Building the project..."
+      - npm run build
+  post_build:
+    commands:
+      - echo "Post-build tasks..."
+      - echo "Nothing to do here..."
+
+artifacts:
+  files:
+    - '**/*'
+  name: $(date +%Y-%m-%d)
+  base-directory: dist
